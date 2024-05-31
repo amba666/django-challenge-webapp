@@ -7,16 +7,16 @@ from django.template.loader import render_to_string
 monthly_challenges={
     "january":"Praise the Lord on january",
     "febuary":"Praise the Lord on Febuary",
-    "march":"Praise the Lord on march",
+    "march": None,
     "april":"Praise the Lord on april",
     "may":"Praise the Lord on may",
     "june":"Praise the Lord on june",
-    "july":"Praise the Lord on july",
+    "july":None,
     "August":"Praise the Lord on Augost",
-    "september":"Praise the Lord on september",
+    "september": None,
     "october":"Praise the Lord on october",
     "november":"Praise the Lord on november",
-    "december":"Praise the Lord on december"
+    "december":None
 
 }
 
@@ -27,7 +27,7 @@ def index(request):
     months = list(monthly_challenges.keys())
 
     return render(request, "challenges/index.html", {
-        
+        "months":months
     })
 
 def monthly_challenge_by_number(request, month):
