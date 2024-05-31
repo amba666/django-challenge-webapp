@@ -10,6 +10,8 @@
 
     {% block content %}
 
+      {% include "challenges/includes/header.html" %}
+
     <h1>{{month_name}}'s Challenge</h1>
     {% if text is not None %}
       <h3>{{ text }}</h3>
